@@ -133,9 +133,10 @@ st.set_page_config(page_title="Media Centre Allocation Merger", layout="wide")
 st.title("Media Centre Allocation Merger")
 
 st.markdown(
-    """**Step 1 – Download your allocation exports from Reports in Media Centre**
-**Step 2 – Drag and drop them below to upload**
-**Step 3 – Download the Consolidated Allocation**""")
+    """**Step 1 – Download your allocation exports from Reports in Media Centre**  
+**Step 2 – Drag and drop them below to upload**  
+**Step 3 – Download the Consolidated Allocation**"""
+)
 
 alloc_files = st.file_uploader("Allocation exports (.xlsx)", type=["xlsx"], accept_multiple_files=True)
 
