@@ -1,3 +1,9 @@
+"""Entry point for backend app."""
+
+def main() -> None:
+    """Main function for backend operations."""
+    pass
+=======
 # Media Centre Allocation Merger
 # Streamlit app to consolidate allocation exports only
 import streamlit as st
