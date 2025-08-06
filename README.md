@@ -1,5 +1,17 @@
 # MC Allocation Merger
 
+## Installation
+
+Install dependencies:
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+## Usage
+
+Run the Streamlit app:
+=======
 ## Testing
 
 Install dependencies and run the test suite with [`pytest`](https://docs.pytest.org/):
@@ -41,6 +53,7 @@ pip install -r requirements.txt
 ```bash
 streamlit run streamlit_app.py
 ```
+=======
 
 ## Tests
 
