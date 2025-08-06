@@ -1,4 +1,5 @@
 # Media Centre Allocation Merger
+=======
 
 A simple Streamlit application that consolidates multiple Media Centre allocation
 exports into a single Excel workbook. Upload one or more allocation files and the
@@ -73,3 +74,19 @@ When running in Docker, mount the configuration directory:
 docker run -p 8501:8501 -v $(pwd)/.streamlit:/app/.streamlit mc_allocation_merger
 ```
 
+## Running locally
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the Streamlit app:
+
+```bash
+cd backend
+./start.sh
+```
+
+Configuration values can be adjusted in `backend/config.yaml`.
