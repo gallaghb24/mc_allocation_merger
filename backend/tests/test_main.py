@@ -1,6 +1,6 @@
-"""Basic tests for backend.app.main import."""
+"""Basic tests for the Streamlit app module."""
 
 
-def test_import_main() -> None:
-    """Ensure backend.app.main can be imported."""
-    import backend.app.main  # noqa: F401
+def test_import_streamlit_app() -> None:
+    """Ensure the Streamlit app can be imported."""
+    import frontend.streamlit_app  # noqa: F401
