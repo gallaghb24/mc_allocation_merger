@@ -36,6 +36,16 @@ ITEM_START_XL = LABEL_COL_XL + 1                     # L (1-based)
 def extract_alloc(file):
     """Read one allocation export – returns (DataFrame, meta dict)."""
     df = pd.read_excel(file, header=6, engine="openpyxl")
+
+    # Normalise column headers – some exports include stray whitespace or
+    # different capitalisation which would otherwise cause KeyErrors.
+    df.columns = df.columns.str.strip()
+    store_col = next((c for c in df.columns if c.strip().lower() == "store number"), None)
+    if store_col is None:
+        st.error("❌ Could not find a 'Store Number' column in the uploaded file.")
+        st.stop()
+    if store_col != "Store Number":
+        df = df.rename(columns={store_col: "Store Number"})
     df["Store Number"] = pd.to_numeric(df["Store Number"], errors="coerce").astype("Int64")
 
     raw = pd.read_excel(file, header=None, engine="openpyxl")
